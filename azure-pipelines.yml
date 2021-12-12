@@ -80,11 +80,6 @@ stages:
               Action: 'Stop Azure App Service'
               WebAppName: 'mlmobileapp'
             
-          - task: DeleteFiles@1
-            inputs:
-              SourceFolder: './'
-              Contents: '*'
-            
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
